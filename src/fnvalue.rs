@@ -13,8 +13,9 @@ fn known_map(path: &Path) -> Option<(&Ident, &Type, &Type)> {
     if let PathArguments::AngleBracketed(AngleBracketedGenericArguments { args, .. }) =
         &last.arguments
     {
+        let arg_iter = args.iter();
         if let Some((GenericArgument::Type(key_type), GenericArgument::Type(value_type))) =
-            args.iter().collect_tuple()
+            arg_iter.collect_tuple()
         {
             return Some((&last.ident, key_type, value_type));
         }
