@@ -4,25 +4,7 @@ version = "24.3.0"
 edition = "2021"
 authors = ["Martin Pool"]
 license = "MIT"
-description = "Inject bugs and see if your tests catch them"
-repository = "https://github.com/sourcefrog/cargo-mutants"
-homepage = "https://mutants.rs/"
-categories = ["development-tools::testing"]
-keywords = ["testing", "mutants", "cargo", "mutation-testing", "coverage"]
 rust-version = "1.74"
-exclude = [
-    ".codespell*",
-    ".markdownlint*",
-    "*.md",
-    ".devcontainer",
-    ".gitattributes",
-    ".gitignore",
-    ".github",
-    "mutants.out*",
-    ".vscode",
-    "book",
-    "testdata",
-]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
