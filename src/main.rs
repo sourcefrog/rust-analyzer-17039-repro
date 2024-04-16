@@ -1,3 +1,0 @@
-mod fnvalue;
-
-fn main() {}

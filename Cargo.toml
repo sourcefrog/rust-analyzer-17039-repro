@@ -10,12 +10,3 @@ rust-version = "1.74"
 
 [dependencies]
 itertools = "0.12"
-quote = "1.0"
-
-[dependencies.proc-macro2]
-features = ["span-locations"]
-version = "1.0.29"
-
-[dependencies.syn]
-version = "2"
-features = ["full", "extra-traits", "visit"]
