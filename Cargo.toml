@@ -80,17 +80,3 @@ features = ["derive"]
 [dependencies.syn]
 version = "2"
 features = ["full", "extra-traits", "visit"]
-
-[target.'cfg(unix)'.dependencies]
-nix = { version="0.28", features = ["process", "signal"] }
-
-[dev-dependencies]
-assert_cmd = "2.0"
-cp_r = "0.5.1"
-insta = "1.12"
-lazy_static = "1.4"
-predicates = "3"
-pretty_assertions = "1"
-regex = "1.5"
-rusty-fork = "0.3"
-walkdir = "2.3"
