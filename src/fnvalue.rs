@@ -10,14 +10,9 @@ use syn::{AngleBracketedGenericArguments, GenericArgument, Ident, Path, PathArgu
 /// recursively-generated values.
 fn known_map(path: &Path) -> Option<(&Ident, &Type, &Type)> {
     let last = path.segments.last()?;
-    if !["BTreeMap", "HashMap"].iter().any(|v| last.ident == v) {
-        return None;
-    }
     if let PathArguments::AngleBracketed(AngleBracketedGenericArguments { args, .. }) =
         &last.arguments
     {
-        // TODO: Skip lifetime args.
-        // TODO: Return the path with args stripped out.
         if let Some((GenericArgument::Type(key_type), GenericArgument::Type(value_type))) =
             args.iter().collect_tuple()
         {
